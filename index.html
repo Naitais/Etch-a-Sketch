@@ -12,10 +12,16 @@
     <script> 
     const body = document.body;
 
+    let askSizeButton=document.createElement("button");
+    body.append(askSizeButton);
+    askSizeButton.id="askSizeButton";
+    askSizeButton.textContent="Change Grid Size"
+
     const mainContainer =document.createElement("div");
     body.append(mainContainer); //contenedor principal
     mainContainer.id=("mainContainer");
 
+    
     
     </script>
 </body>

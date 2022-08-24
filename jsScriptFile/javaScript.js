@@ -18,6 +18,18 @@ const hoverFunc= ()=>{
     e.target.classList.remove("hovered");
     })
 }
+
+let gridSize;
+
+
+const getPromptSize=(e)=> {
+    gridSize = prompt("Enter the desired Grid Size: ");
+    console.log(gridSize);
+    e.stopPropagation();
+}
+
+askSizeButton.addEventListener("click", getPromptSize);
+
 hoverFunc()
 
 

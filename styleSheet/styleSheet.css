@@ -12,6 +12,8 @@ html,body
     padding: 0px;
     overflow-x: hidden; 
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 #mainContainer{
@@ -23,10 +25,16 @@ html,body
 
 .gridDiv{
     border: solid black 1px;
-    background-color: red;
+    background-color: white;
     flex: 1 1 6.25%;
 }
 
 .hovered{
+    background-color: red;
+}
+
+#askSizeButton{
+    height: 3em;
     background-color: white;
+    font-size:20px;
 }
