@@ -11,5 +11,21 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+    background-color: white;
+    
+}
+
+#mainContainer{
+    display: flex;
+    flex-flow: row wrap;
+    
+    
+}
+
+.gridDiv{
+    border: solid black 1px;
     background-color: red;
+    flex: 1 1 6.25%;
+    
+    
 }
