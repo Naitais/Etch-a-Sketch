@@ -4,12 +4,6 @@ const createDiv =(newDiv) =>{
     newDiv.classList.add("gridDiv");
 }
 
-for(let r =0;r<16;r++){
-    for(let i= 0; i<16; i++){
-            createDiv()
-    }  
-}
-
 const hoverFunc= ()=>{
     newDiv=addEventListener("mouseover", (e)=>{
     e.target.classList.add("hovered");
@@ -19,17 +13,44 @@ const hoverFunc= ()=>{
     })
 }
 
-let gridSize;
+const createGrid=()=>{
+    let gridSize=16;
+    for(r =0;r<gridSize;r++){
+        for(i= 0; i<gridSize; i++){
+                createDiv()
+        }  
+    }
+}
 
+const resetGrid=()=>{
+    while(mainContainer.firstChild){
+        mainContainer.removeChild(mainContainer.firstChild)
+    }
+}
 
 const getPromptSize=(e)=> {
-    gridSize = prompt("Enter the desired Grid Size: ");
-    console.log(gridSize);
-    e.stopPropagation();
+    
+    let gridSize = prompt("Enter the desired Grid Size: ");
+    if(gridSize>100){
+       alert("Enter a number lower than 100.")
+    }else{
+         console.log(gridSize);
+        e.stopPropagation();
+        resetGrid()
+        for(r =0;r<gridSize;r++){
+            for(i= 0; i<gridSize; i++){
+                    createDiv()
+            }  
+        }
+    }
+    
+    
+    
 }
 
 askSizeButton.addEventListener("click", getPromptSize);
 
 hoverFunc()
+createGrid()
 
 
